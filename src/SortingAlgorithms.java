@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /*
  Vladyslav Kovtun, 19899
 */
@@ -41,5 +43,14 @@ public class SortingAlgorithms {
             sorted[i] = heap.removeMin().getKey();
         }
         return sorted;
+    }
+
+    public static Integer[] generateRandomArray(int capacity) {
+        Random random = new Random();
+        Integer[] array = new Integer[capacity];
+        for (int i = 0; i < capacity; i++) {
+            array[i] = random.nextInt(capacity);
+        }
+        return array;
     }
 }
